@@ -5,7 +5,7 @@ from .models import Show
 # Create your views here.
 def index(request):
     context = {
-        'shows': Show.objects.all()
+        'show': Show.objects.all()
     }
     return render(request, 'shows.html', context)
 
@@ -44,7 +44,7 @@ def update(request, show_id):
     to_update.description = request.POST['description']
     to_update.save()
 
-    return redirect('/shows/')
+    return redirect('/shows')
 
 def show(request, show_id):
     # query for one show with show_id

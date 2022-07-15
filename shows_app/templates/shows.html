@@ -21,13 +21,13 @@
             </tr>
         </thead>
         <tbody>
-        {% for show in shows %}
+        {% for shows in show %}
             <tr>
-                <td>{{ show.id }}</td>
-                <td>{{ show.title }}</td>
-                <td>{{ show.network }}</td>
-                <td>{{ show.release_date|date:"SHORT_DATE_FORMAT" }}</td>
-                <td><a href="/shows/{{ show.id }}">Show</a> | <a href="/shows/{{ show.id }}/edit">Edit</a> | <a href="/shows/{{ show.id }}/delete">Delete</a></td>
+                <td>{{ shows.id }}</td>
+                <td>{{ shows.title }}</td>
+                <td>{{ shows.network }}</td>
+                <td>{{ shows.release_date|date:"SHORT_DATE_FORMAT" }}</td>
+                <td><a href="/shows/{{show.id}}">Show</a> | <a href="/shows/{{ shows.id }}/edit">Edit</a> | <a href="/shows/{{ shows.id }}/delete">Delete</a></td>
             </tr>
         {% endfor %}
         </tbody>
